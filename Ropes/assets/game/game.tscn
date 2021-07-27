@@ -1,0 +1,261 @@
+[gd_scene load_steps=17 format=2]
+
+[ext_resource path="res://assets/game/env/push_btn_nor.png" type="Texture" id=1]
+[ext_resource path="res://assets/game/env/push_btn_pres.png" type="Texture" id=2]
+[ext_resource path="res://assets/game/env/name_holder.png" type="Texture" id=3]
+[ext_resource path="res://assets/game/env/progress_bar.png" type="Texture" id=4]
+[ext_resource path="res://assets/game/env/indicator.png" type="Texture" id=5]
+[ext_resource path="res://assets/fonts/GiveYouGlory-Regular.ttf" type="DynamicFontData" id=6]
+[ext_resource path="res://assets/game/env/rope.tscn" type="PackedScene" id=7]
+[ext_resource path="res://assets/game/env/ground.png" type="Texture" id=8]
+[ext_resource path="res://assets/game/game.gd" type="Script" id=9]
+[ext_resource path="res://assets/game/sprite/player.tscn" type="PackedScene" id=10]
+[ext_resource path="res://assets/audio/game_play.wav" type="AudioStream" id=11]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+font_data = ExtResource( 6 )
+
+[sub_resource type="RectangleShape2D" id=2]
+extents = Vector2( 224.283, 10 )
+
+[sub_resource type="RectangleShape2D" id=3]
+extents = Vector2( 265.847, 10 )
+
+[sub_resource type="Animation" id=4]
+resource_name = "startup"
+length = 3.3
+tracks/0/type = "value"
+tracks/0/path = NodePath("layer:modulate")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 1.6, 3 ),
+"transitions": PoolRealArray( 1, 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 1, 1, 1, 0.9 ), Color( 1, 1, 1, 0 ) ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("countdown:text")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0, 1, 2, 2.9 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "3", "2", "1", "GOO !" ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("countdown:custom_colors/font_color")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 0,
+"values": [ Color( 1, 1, 1, 1 ), Color( 0, 0, 0, 1 ) ]
+}
+tracks/3/type = "value"
+tracks/3/path = NodePath("countdown:visible")
+tracks/3/interp = 1
+tracks/3/loop_wrap = true
+tracks/3/imported = false
+tracks/3/enabled = true
+tracks/3/keys = {
+"times": PoolRealArray( 0, 3.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+tracks/4/type = "value"
+tracks/4/path = NodePath("layer:visible")
+tracks/4/interp = 1
+tracks/4/loop_wrap = true
+tracks/4/imported = false
+tracks/4/enabled = true
+tracks/4/keys = {
+"times": PoolRealArray( 0, 3.3 ),
+"transitions": PoolRealArray( 1, 1 ),
+"update": 1,
+"values": [ true, false ]
+}
+
+[sub_resource type="DynamicFont" id=5]
+size = 125
+font_data = ExtResource( 6 )
+
+[node name="game" type="Node2D"]
+script = ExtResource( 9 )
+
+[node name="background" type="ColorRect" parent="."]
+margin_left = -3.0
+margin_right = 2085.0
+margin_bottom = 1000.0
+color = Color( 0.913725, 0.913725, 0.913725, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="background2" type="ColorRect" parent="."]
+margin_left = -3.0
+margin_right = 2085.0
+margin_bottom = 1000.0
+color = Color( 0.913725, 0.913725, 0.913725, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="ground" type="Sprite" parent="."]
+position = Vector2( 833.465, 664.801 )
+scale = Vector2( 1.11429, 1.11429 )
+texture = ExtResource( 8 )
+
+[node name="indicator" type="Sprite" parent="."]
+position = Vector2( 824.209, 79.3519 )
+texture = ExtResource( 5 )
+
+[node name="progress_bar" type="Sprite" parent="."]
+position = Vector2( 812.561, 86.8982 )
+scale = Vector2( 0.797677, 0.797677 )
+texture = ExtResource( 4 )
+
+[node name="player_name1" type="Label" parent="."]
+margin_left = 109.018
+margin_top = 40.5032
+margin_right = 277.018
+margin_bottom = 113.503
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "player A"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name_left" type="Sprite" parent="player_name1"]
+position = Vector2( 91.681, 34.8909 )
+rotation = 3.14159
+scale = Vector2( 1, -1 )
+texture = ExtResource( 3 )
+
+[node name="player_name2" type="Label" parent="."]
+margin_left = 1345.97
+margin_top = 48.118
+margin_right = 1513.96
+margin_bottom = 121.118
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "player b"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="name_right" type="Sprite" parent="player_name2"]
+position = Vector2( 84.747, 32.5912 )
+texture = ExtResource( 3 )
+
+[node name="rope" parent="." instance=ExtResource( 7 )]
+position = Vector2( 318.911, 557.44 )
+
+[node name="player1" parent="." instance=ExtResource( 10 )]
+position = Vector2( 1088.8, 587.44 )
+frame = 8
+playing = true
+
+[node name="player2" parent="." instance=ExtResource( 10 )]
+position = Vector2( 460.928, 587.44 )
+scale = Vector2( -0.87, 0.781 )
+frame = 7
+playing = true
+
+[node name="TextureButton" type="TextureButton" parent="."]
+margin_left = 1418.58
+margin_top = 531.213
+margin_right = 1773.58
+margin_bottom = 850.213
+rect_scale = Vector2( 0.5, 0.5 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="detector_left" type="Area2D" parent="."]
+position = Vector2( 1.414, -20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detector_left"]
+position = Vector2( 423.662, 804.591 )
+shape = SubResource( 2 )
+
+[node name="detector_right" type="Area2D" parent="."]
+position = Vector2( 755.795, -20 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="detector_right"]
+position = Vector2( 423.662, 804.591 )
+shape = SubResource( 2 )
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+position = Vector2( 8.47571, 14.8325 )
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="StaticBody2D"]
+position = Vector2( 771.044, 586.154 )
+shape = SubResource( 3 )
+
+[node name="Timer" type="Timer" parent="."]
+wait_time = 0.1
+
+[node name="time" type="Label" parent="."]
+margin_left = 788.0
+margin_top = 125.0
+margin_right = 867.0
+margin_bottom = 198.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0, 0, 0, 1 )
+text = "00:00"
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+pause_mode = 2
+anims/startup = SubResource( 4 )
+
+[node name="layer" type="ColorRect" parent="."]
+visible = false
+margin_left = -20.0
+margin_top = -28.0
+margin_right = 2093.0
+margin_bottom = 1005.0
+color = Color( 0, 0, 0, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="countdown" type="Label" parent="."]
+visible = false
+margin_left = 552.963
+margin_top = 217.836
+margin_right = 1161.96
+margin_bottom = 419.836
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 1, 1, 1, 1 )
+text = "3"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="AudioStreamPlayer" type="AudioStreamPlayer" parent="."]
+stream = ExtResource( 11 )
+
+[connection signal="pressed" from="TextureButton" to="." method="_on_TextureButton_pressed"]
+[connection signal="body_entered" from="detector_left" to="." method="_on_detector_left_body_entered"]
+[connection signal="body_entered" from="detector_right" to="." method="_on_detector_right_body_entered"]
+[connection signal="timeout" from="Timer" to="." method="_on_Timer_timeout"]
+[connection signal="animation_finished" from="AnimationPlayer" to="." method="_on_AnimationPlayer_animation_finished"]
+[connection signal="finished" from="AudioStreamPlayer" to="." method="_on_AudioStreamPlayer_finished"]

@@ -1,0 +1,46 @@
+[gd_scene load_steps=21 format=2]
+
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_00.png" type="Texture" id=1]
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_01.png" type="Texture" id=2]
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_02.png" type="Texture" id=3]
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_03.png" type="Texture" id=4]
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_04.png" type="Texture" id=5]
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_05.png" type="Texture" id=6]
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_06.png" type="Texture" id=7]
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_07.png" type="Texture" id=8]
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_08.png" type="Texture" id=9]
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_09.png" type="Texture" id=10]
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_10.png" type="Texture" id=11]
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_11.png" type="Texture" id=12]
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_12.png" type="Texture" id=13]
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_13.png" type="Texture" id=14]
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_14.png" type="Texture" id=15]
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_15.png" type="Texture" id=16]
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_16.png" type="Texture" id=17]
+[ext_resource path="res://assets/game/sprite/polling_state_normal/Armature_polling_state_17.png" type="Texture" id=18]
+
+[sub_resource type="SpriteFrames" id=1]
+animations = [ {
+"frames": [ ExtResource( 1 ), ExtResource( 2 ), ExtResource( 3 ), ExtResource( 4 ), ExtResource( 5 ), ExtResource( 6 ), ExtResource( 7 ), ExtResource( 8 ), ExtResource( 9 ), ExtResource( 10 ), ExtResource( 11 ), ExtResource( 12 ), ExtResource( 13 ), ExtResource( 14 ), ExtResource( 15 ), ExtResource( 16 ), ExtResource( 17 ), ExtResource( 18 ) ],
+"loop": true,
+"name": "normal_polling",
+"speed": 25.0
+} ]
+
+[sub_resource type="PhysicsMaterial" id=2]
+friction = 0.0
+
+[node name="player" type="AnimatedSprite"]
+position = Vector2( -19.478, -54.9187 )
+scale = Vector2( 0.870109, 0.781154 )
+frames = SubResource( 1 )
+animation = "normal_polling"
+frame = 1
+
+[node name="StaticBody2D" type="StaticBody2D" parent="."]
+physics_material_override = SubResource( 2 )
+
+[node name="CollisionPolygon2D" type="CollisionPolygon2D" parent="StaticBody2D"]
+position = Vector2( -10.951, 0.0767136 )
+rotation = -0.0617004
+polygon = PoolVector2Array( -99.4793, -2.40219, -48.7321, -13.055, -20.2429, -12.8982, 7.26892, -1.5791, 27.6126, 18.596, 32.4206, 33.9636, 28.6648, 48.1608, 20.2707, 58.2236 )
