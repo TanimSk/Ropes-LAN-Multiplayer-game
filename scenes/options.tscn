@@ -1,0 +1,266 @@
+[gd_scene load_steps=24 format=2]
+
+[ext_resource path="res://assets/images/sound_level.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/muted.png" type="Texture" id=2]
+[ext_resource path="res://scripts/options.gd" type="Script" id=3]
+[ext_resource path="res://assets/images/slider_bar.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/back_normal.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/back_pressed.png" type="Texture" id=6]
+[ext_resource path="res://assets/images/wide_btn_normal.png" type="Texture" id=7]
+[ext_resource path="res://assets/images/wide_btn_pressed.png" type="Texture" id=8]
+[ext_resource path="res://assets/fonts/GiveYouGlory-Regular.ttf" type="DynamicFontData" id=9]
+[ext_resource path="res://assets/images/button_pressed_inverted.png" type="Texture" id=10]
+[ext_resource path="res://assets/images/button_normal_inverted.png" type="Texture" id=11]
+[ext_resource path="res://assets/images/info_pressed.png" type="Texture" id=14]
+[ext_resource path="res://assets/images/info.png" type="Texture" id=15]
+[ext_resource path="res://assets/images/colors/white.png" type="Texture" id=16]
+[ext_resource path="res://assets/images/colors/green.png" type="Texture" id=17]
+[ext_resource path="res://assets/images/colors/red.png" type="Texture" id=18]
+[ext_resource path="res://assets/images/colors/yellow.png" type="Texture" id=19]
+[ext_resource path="res://assets/images/colors/purple.png" type="Texture" id=20]
+
+[sub_resource type="StyleBoxEmpty" id=1]
+
+[sub_resource type="StyleBoxEmpty" id=2]
+
+[sub_resource type="DynamicFont" id=3]
+size = 40
+font_data = ExtResource( 9 )
+
+[sub_resource type="StyleBoxLine" id=4]
+color = Color( 0.286275, 0.286275, 0.286275, 1 )
+thickness = 2
+
+[sub_resource type="DynamicFont" id=5]
+size = 35
+font_data = ExtResource( 9 )
+
+[node name="Options" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="Player_name" type="LineEdit" parent="."]
+anchor_left = 0.5
+anchor_right = 0.5
+margin_left = -243.0
+margin_right = 243.0
+margin_bottom = 138.0
+custom_styles/focus = SubResource( 1 )
+custom_styles/normal = SubResource( 2 )
+custom_fonts/font = SubResource( 3 )
+custom_colors/selection_color = Color( 0.541176, 0.541176, 0.541176, 1 )
+custom_colors/cursor_color = Color( 0.168627, 0.168627, 0.168627, 1 )
+custom_colors/font_color = Color( 0.14902, 0.14902, 0.14902, 1 )
+align = 1
+max_length = 9
+placeholder_text = "Enter your name"
+caret_blink = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sound" type="GridContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -245.0
+margin_top = -83.5
+margin_right = 245.0
+margin_bottom = 3.5
+custom_constants/hseparation = 40
+columns = 2
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="sound" type="TextureButton" parent="sound"]
+margin_right = 100.0
+margin_bottom = 87.0
+rect_min_size = Vector2( 100, 87 )
+toggle_mode = true
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="HSlider" type="HSlider" parent="sound"]
+margin_left = 140.0
+margin_right = 490.0
+margin_bottom = 87.0
+rect_min_size = Vector2( 350, 87 )
+custom_icons/grabber_disabled = ExtResource( 4 )
+custom_icons/grabber_highlight = ExtResource( 4 )
+custom_icons/grabber = ExtResource( 4 )
+custom_styles/slider = SubResource( 4 )
+min_value = 1.0
+value = 100.0
+rounded = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="change_bg" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -134.5
+margin_top = 48.0
+margin_right = 150.5
+margin_bottom = 146.0
+texture_normal = ExtResource( 7 )
+texture_pressed = ExtResource( 8 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="change_bg_text" type="Label" parent="change_bg"]
+margin_left = -40.621
+margin_top = 21.7798
+margin_right = 327.379
+margin_bottom = 94.7798
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.156863, 0.156863, 0.156863, 1 )
+text = "change BG"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="back" type="TextureButton" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 9.0
+margin_top = -108.0
+margin_right = 109.0
+margin_bottom = -8.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="change_bg_layer" type="ColorRect" parent="."]
+visible = false
+anchor_right = 1.0
+anchor_bottom = 1.0
+color = Color( 0.0588235, 0.0588235, 0.0588235, 0.882353 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="colors" type="GridContainer" parent="change_bg_layer"]
+light_mask = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -290.0
+margin_top = -129.044
+margin_right = 290.0
+margin_bottom = -29.0443
+custom_constants/hseparation = 20
+columns = 5
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="white" type="TextureButton" parent="change_bg_layer/colors"]
+margin_right = 100.0
+margin_bottom = 100.0
+texture_normal = ExtResource( 16 )
+
+[node name="green" type="TextureButton" parent="change_bg_layer/colors"]
+margin_left = 120.0
+margin_right = 220.0
+margin_bottom = 100.0
+texture_normal = ExtResource( 17 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="red" type="TextureButton" parent="change_bg_layer/colors"]
+margin_left = 240.0
+margin_right = 340.0
+margin_bottom = 100.0
+texture_normal = ExtResource( 18 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="yellow" type="TextureButton" parent="change_bg_layer/colors"]
+margin_left = 360.0
+margin_right = 460.0
+margin_bottom = 100.0
+texture_normal = ExtResource( 19 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="purple" type="TextureButton" parent="change_bg_layer/colors"]
+margin_left = 480.0
+margin_right = 580.0
+margin_bottom = 100.0
+texture_normal = ExtResource( 20 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="confirm" type="TextureButton" parent="change_bg_layer"]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -73.0
+margin_top = -225.0
+margin_right = 99.0
+margin_bottom = -148.0
+texture_normal = ExtResource( 11 )
+texture_pressed = ExtResource( 10 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start" type="Label" parent="change_bg_layer/confirm"]
+margin_left = 21.0
+margin_top = 17.0
+margin_right = 149.0
+margin_bottom = 90.0
+custom_fonts/font = SubResource( 5 )
+custom_colors/font_color = Color( 0.866667, 0.866667, 0.866667, 1 )
+text = "OK"
+align = 1
+
+[node name="info" type="TextureButton" parent="."]
+anchor_left = 1.0
+anchor_right = 1.0
+margin_left = -85.0
+margin_bottom = 85.0
+texture_normal = ExtResource( 15 )
+texture_pressed = ExtResource( 14 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="sound/sound" to="." method="_on_sound_button_up"]
+[connection signal="value_changed" from="sound/HSlider" to="." method="_on_HSlider_value_changed"]
+[connection signal="button_up" from="change_bg" to="." method="_on_change_bg_button_up"]
+[connection signal="button_up" from="back" to="." method="_on_back_button_up"]
+[connection signal="pressed" from="change_bg_layer/colors/white" to="." method="_on_white_pressed"]
+[connection signal="pressed" from="change_bg_layer/colors/green" to="." method="_on_green_pressed"]
+[connection signal="pressed" from="change_bg_layer/colors/red" to="." method="_on_red_pressed"]
+[connection signal="pressed" from="change_bg_layer/colors/yellow" to="." method="_on_yellow_pressed"]
+[connection signal="pressed" from="change_bg_layer/colors/purple" to="." method="_on_purple_pressed"]
+[connection signal="button_up" from="change_bg_layer/confirm" to="." method="_on_confirm_button_up"]
+[connection signal="button_up" from="info" to="." method="_on_info_button_up"]

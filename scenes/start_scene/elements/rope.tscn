@@ -1,0 +1,598 @@
+[gd_scene load_steps=2 format=2]
+
+[sub_resource type="CapsuleShape2D" id=1]
+radius = 5.78702
+height = 20.1535
+
+[node name="rope" type="Node2D"]
+__meta__ = {
+"_edit_vertical_guides_": [  ]
+}
+
+[node name="rope1" type="RigidBody2D" parent="."]
+position = Vector2( 30.5111, 0.0423889 )
+collision_layer = 0
+gravity_scale = 1.5
+
+[node name="ColorRect" type="ColorRect" parent="rope1"]
+margin_left = -18.1534
+margin_top = -3.0
+margin_right = 16.8466
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope1"]
+position = Vector2( -0.205362, 0.150269 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope2" type="RigidBody2D" parent="."]
+position = Vector2( 35, 0 )
+collision_layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="rope2"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope2"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope3" type="RigidBody2D" parent="."]
+position = Vector2( 69.5, 0 )
+collision_layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="rope3"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope3"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope4" type="RigidBody2D" parent="."]
+position = Vector2( 103.5, 0 )
+collision_layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="rope4"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope4"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope5" type="RigidBody2D" parent="."]
+position = Vector2( 138.428, 0.21431 )
+collision_layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="rope5"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope5"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope6" type="RigidBody2D" parent="."]
+position = Vector2( 172.102, 0.21431 )
+collision_layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="rope6"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope6"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope7" type="RigidBody2D" parent="."]
+position = Vector2( 206.337, 0.21431 )
+collision_layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="rope7"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope7"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope8" type="RigidBody2D" parent="."]
+position = Vector2( 240.292, 0.21431 )
+collision_layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="rope8"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope8"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope9" type="RigidBody2D" parent="."]
+position = Vector2( 274.808, 0.21431 )
+collision_layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="rope9"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope9"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope10" type="RigidBody2D" parent="."]
+position = Vector2( 309.323, -0.0663071 )
+
+[node name="ColorRect" type="ColorRect" parent="rope10"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope10"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope11" type="RigidBody2D" parent="."]
+position = Vector2( 344.12, 0.21431 )
+
+[node name="ColorRect" type="ColorRect" parent="rope11"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope11"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope12" type="RigidBody2D" parent="."]
+position = Vector2( 378.355, 0.21431 )
+
+[node name="ColorRect" type="ColorRect" parent="rope12"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope12"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope13" type="RigidBody2D" parent="."]
+position = Vector2( 412.59, 0.21431 )
+
+[node name="ColorRect" type="ColorRect" parent="rope13"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope13"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope14" type="RigidBody2D" parent="."]
+position = Vector2( 447.105, 0.21431 )
+
+[node name="ColorRect" type="ColorRect" parent="rope14"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope14"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope15" type="RigidBody2D" parent="."]
+position = Vector2( 481.341, 0.21431 )
+
+[node name="ColorRect" type="ColorRect" parent="rope15"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope15"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope16" type="RigidBody2D" parent="."]
+position = Vector2( 515.646, 0.21431 )
+
+[node name="ColorRect" type="ColorRect" parent="rope16"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope16"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope17" type="RigidBody2D" parent="."]
+position = Vector2( 550.431, 0.21431 )
+
+[node name="ColorRect" type="ColorRect" parent="rope17"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope17"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope18" type="RigidBody2D" parent="."]
+position = Vector2( 584.62, 0.21431 )
+
+[node name="ColorRect" type="ColorRect" parent="rope18"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope18"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope19" type="RigidBody2D" parent="."]
+position = Vector2( 619.108, 0.21431 )
+collision_layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="rope19"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope19"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope20" type="RigidBody2D" parent="."]
+position = Vector2( 653.892, 0.21431 )
+collision_layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="rope20"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope20"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope21" type="RigidBody2D" parent="."]
+position = Vector2( 688.676, 0.134758 )
+collision_layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="rope21"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope21"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope22" type="RigidBody2D" parent="."]
+position = Vector2( 723.153, 0.134758 )
+collision_layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="rope22"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope22"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope23" type="RigidBody2D" parent="."]
+position = Vector2( 758.05, 0.134758 )
+collision_layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="rope23"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope23"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope24" type="RigidBody2D" parent="."]
+position = Vector2( 793.158, -0.0754662 )
+collision_layer = 0
+
+[node name="ColorRect" type="ColorRect" parent="rope24"]
+margin_left = 12.0
+margin_top = -3.0
+margin_right = 47.0
+margin_bottom = 4.0
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope24"]
+position = Vector2( 29.3862, -0.0370216 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="rope25" type="RigidBody2D" parent="."]
+position = Vector2( 856.822, -0.0754681 )
+collision_layer = 0
+gravity_scale = 1.5
+
+[node name="ColorRect" type="ColorRect" parent="rope25"]
+margin_left = -17.2932
+margin_top = -3.47247
+margin_right = 17.7068
+margin_bottom = 3.52753
+color = Color( 0.152941, 0.152941, 0.152941, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="CollisionShape2D" type="CollisionShape2D" parent="rope25"]
+position = Vector2( -0.0643921, 0.120422 )
+rotation = 1.5708
+shape = SubResource( 1 )
+
+[node name="PinJoint2" type="PinJoint2D" parent="."]
+position = Vector2( 46.6608, 0.334087 )
+node_a = NodePath("../rope1")
+node_b = NodePath("../rope2")
+
+[node name="PinJoint3" type="PinJoint2D" parent="."]
+position = Vector2( 81.7858, 0.0840874 )
+node_a = NodePath("../rope2")
+node_b = NodePath("../rope3")
+
+[node name="PinJoint4" type="PinJoint2D" parent="."]
+position = Vector2( 116.036, 0.334087 )
+node_a = NodePath("../rope3")
+node_b = NodePath("../rope4")
+
+[node name="PinJoint5" type="PinJoint2D" parent="."]
+position = Vector2( 150.536, 0.209087 )
+node_a = NodePath("../rope4")
+node_b = NodePath("../rope5")
+
+[node name="PinJoint6" type="PinJoint2D" parent="."]
+position = Vector2( 184.911, 0.209087 )
+node_a = NodePath("../rope5")
+node_b = NodePath("../rope6")
+
+[node name="PinJoint7" type="PinJoint2D" parent="."]
+position = Vector2( 219.286, 0.209087 )
+node_a = NodePath("../rope6")
+node_b = NodePath("../rope7")
+
+[node name="PinJoint8" type="PinJoint2D" parent="."]
+position = Vector2( 252.786, 0.209087 )
+node_a = NodePath("../rope7")
+node_b = NodePath("../rope8")
+
+[node name="PinJoint9" type="PinJoint2D" parent="."]
+position = Vector2( 286.911, 0.209087 )
+node_a = NodePath("../rope8")
+node_b = NodePath("../rope9")
+
+[node name="PinJoint10" type="PinJoint2D" parent="."]
+position = Vector2( 321.661, 0.209087 )
+node_a = NodePath("../rope9")
+node_b = NodePath("../rope10")
+
+[node name="PinJoint11" type="PinJoint2D" parent="."]
+position = Vector2( 356.161, 0.334087 )
+node_a = NodePath("../rope10")
+node_b = NodePath("../rope11")
+
+[node name="PinJoint12" type="PinJoint2D" parent="."]
+position = Vector2( 390.786, 0.459087 )
+node_a = NodePath("../rope11")
+node_b = NodePath("../rope12")
+
+[node name="PinJoint13" type="PinJoint2D" parent="."]
+position = Vector2( 424.536, 0.209087 )
+node_a = NodePath("../rope12")
+node_b = NodePath("../rope13")
+
+[node name="PinJoint14" type="PinJoint2D" parent="."]
+position = Vector2( 459.036, 0.584087 )
+node_a = NodePath("../rope13")
+node_b = NodePath("../rope14")
+
+[node name="PinJoint15" type="PinJoint2D" parent="."]
+position = Vector2( 493.661, 0.209087 )
+node_a = NodePath("../rope14")
+node_b = NodePath("../rope15")
+
+[node name="PinJoint16" type="PinJoint2D" parent="."]
+position = Vector2( 527.989, 0.605938 )
+node_a = NodePath("../rope15")
+node_b = NodePath("../rope16")
+
+[node name="PinJoint17" type="PinJoint2D" parent="."]
+position = Vector2( 561.919, 0.605938 )
+node_a = NodePath("../rope16")
+node_b = NodePath("../rope17")
+
+[node name="PinJoint18" type="PinJoint2D" parent="."]
+position = Vector2( 597.237, -0.0247387 )
+node_a = NodePath("../rope17")
+node_b = NodePath("../rope18")
+
+[node name="PinJoint19" type="PinJoint2D" parent="."]
+position = Vector2( 631.47, -0.0405086 )
+node_a = NodePath("../rope18")
+node_b = NodePath("../rope19")
+
+[node name="PinJoint20" type="PinJoint2D" parent="."]
+position = Vector2( 666.295, 0.313045 )
+node_a = NodePath("../rope19")
+node_b = NodePath("../rope20")
+
+[node name="PinJoint21" type="PinJoint2D" parent="."]
+position = Vector2( 700.766, 0.489822 )
+node_a = NodePath("../rope20")
+node_b = NodePath("../rope21")
+
+[node name="PinJoint22" type="PinJoint2D" parent="."]
+position = Vector2( 735.591, 0.136272 )
+node_a = NodePath("../rope21")
+node_b = NodePath("../rope22")
+
+[node name="PinJoint23" type="PinJoint2D" parent="."]
+position = Vector2( 769.865, 0.323558 )
+node_a = NodePath("../rope22")
+node_b = NodePath("../rope23")
+
+[node name="PinJoint24" type="PinJoint2D" parent="."]
+position = Vector2( 805.262, 0.136268 )
+node_a = NodePath("../rope23")
+node_b = NodePath("../rope24")
+
+[node name="PinJoint25" type="PinJoint2D" parent="."]
+position = Vector2( 839.724, 0.323555 )
+node_a = NodePath("../rope24")
+node_b = NodePath("../rope25")

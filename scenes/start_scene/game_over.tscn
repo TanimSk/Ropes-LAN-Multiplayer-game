@@ -1,0 +1,106 @@
+[gd_scene load_steps=10 format=2]
+
+[ext_resource path="res://scripts/game_over.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/GiveYouGlory-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/images/back_pressed.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/button_normal.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/back_normal.png" type="Texture" id=5]
+[ext_resource path="res://assets/images/button_pressed.png" type="Texture" id=6]
+[ext_resource path="res://admob-lib/admob.gd" type="Script" id=7]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="DynamicFont" id=2]
+size = 45
+font_data = ExtResource( 2 )
+
+[node name="GameOver" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_left = 1.88776
+margin_right = 1.8877
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="stat" type="Label" parent="."]
+anchor_right = 1.0
+margin_right = 6.10352e-05
+margin_bottom = 197.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0705882, 0.0705882, 0.0705882, 1 )
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="restart" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -113.0
+margin_top = -130.0
+margin_right = 113.0
+margin_bottom = -29.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 6 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="text" type="Label" parent="restart"]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -92.5
+margin_top = -30.5
+margin_right = 92.5
+margin_bottom = 42.5
+custom_fonts/font = SubResource( 2 )
+custom_colors/font_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+text = "Restart"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="back" type="TextureButton" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 9.0
+margin_top = -108.0
+margin_right = 109.0
+margin_bottom = -8.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="emoji" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -91.0
+margin_top = -79.0
+margin_right = 91.0
+margin_bottom = 103.0
+expand = true
+
+[node name="AdMob" type="Node" parent="."]
+script = ExtResource( 7 )
+banner_on_top = false
+interstitial_id = "ca-app-pub-3940256099942544/8691691433"
+rewarded_id = " ca-app-pub-3940256099942544/5224354917"
+
+[connection signal="button_up" from="restart" to="." method="_on_restart_button_up"]
+[connection signal="button_up" from="back" to="." method="_on_back_button_up"]
+[connection signal="interstitial_failed_to_load" from="AdMob" to="." method="_on_AdMob_interstitial_failed_to_load"]

@@ -1,0 +1,103 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://assets/images/button_normal.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/button_pressed.png" type="Texture" id=2]
+[ext_resource path="res://assets/fonts/GiveYouGlory-Regular.ttf" type="DynamicFontData" id=3]
+[ext_resource path="res://assets/images/back_pressed.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/back_normal.png" type="Texture" id=5]
+[ext_resource path="res://scripts/lobby.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+font_data = ExtResource( 3 )
+
+[node name="lobby" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 6 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu_text" type="GridContainer" parent="."]
+light_mask = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -42.0
+margin_top = -98.0
+margin_right = 42.0
+margin_bottom = 98.0
+custom_constants/vseparation = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start" type="Label" parent="menu_text"]
+margin_right = 84.0
+margin_bottom = 73.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+text = "Host"
+align = 1
+
+[node name="options" type="Label" parent="menu_text"]
+margin_top = 123.0
+margin_right = 84.0
+margin_bottom = 196.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+text = "Join"
+align = 1
+
+[node name="menu_buttons" type="GridContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -109.0
+margin_right = 100.0
+margin_bottom = 103.0
+custom_constants/vseparation = 32
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="host" type="TextureButton" parent="menu_buttons"]
+margin_right = 200.8
+margin_bottom = 90.4
+rect_min_size = Vector2( 200.8, 90.4 )
+rect_pivot_offset = Vector2( 95.0263, 44.9223 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+expand = true
+
+[node name="join" type="TextureButton" parent="menu_buttons"]
+margin_top = 122.0
+margin_right = 200.8
+margin_bottom = 212.4
+rect_min_size = Vector2( 200.8, 90.4 )
+rect_pivot_offset = Vector2( 99.0309, 43.0579 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+expand = true
+
+[node name="back" type="TextureButton" parent="."]
+anchor_top = 1.0
+anchor_bottom = 1.0
+margin_left = 9.0
+margin_top = -108.0
+margin_right = 109.0
+margin_bottom = -8.0
+texture_normal = ExtResource( 5 )
+texture_pressed = ExtResource( 4 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[connection signal="button_up" from="menu_buttons/host" to="." method="_on_host_button_up"]
+[connection signal="button_up" from="menu_buttons/join" to="." method="_on_join_button_up"]
+[connection signal="button_up" from="back" to="." method="_on_back_button_up"]

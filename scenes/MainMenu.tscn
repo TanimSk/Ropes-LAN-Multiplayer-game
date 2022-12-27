@@ -1,0 +1,187 @@
+[gd_scene load_steps=9 format=2]
+
+[ext_resource path="res://assets/images/button_normal.png" type="Texture" id=1]
+[ext_resource path="res://assets/images/button_pressed.png" type="Texture" id=2]
+[ext_resource path="res://scripts/MainMenu.gd" type="Script" id=3]
+[ext_resource path="res://assets/fonts/GiveYouGlory-Regular.ttf" type="DynamicFontData" id=4]
+[ext_resource path="res://assets/images/hand.png" type="Texture" id=5]
+[ext_resource path="res://admob-lib/admob.gd" type="Script" id=6]
+
+[sub_resource type="DynamicFont" id=1]
+size = 45
+use_mipmaps = true
+use_filter = true
+font_data = ExtResource( 4 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "hand"
+loop = true
+tracks/0/type = "value"
+tracks/0/path = NodePath("menu_buttons/start:disabled")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/1/type = "value"
+tracks/1/path = NodePath("menu_buttons/exit:disabled")
+tracks/1/interp = 1
+tracks/1/loop_wrap = true
+tracks/1/imported = false
+tracks/1/enabled = true
+tracks/1/keys = {
+"times": PoolRealArray( 0 ),
+"transitions": PoolRealArray( 1 ),
+"update": 1,
+"values": [ true ]
+}
+tracks/2/type = "value"
+tracks/2/path = NodePath("menu_buttons/options/hand:position")
+tracks/2/interp = 1
+tracks/2/loop_wrap = true
+tracks/2/imported = false
+tracks/2/enabled = true
+tracks/2/keys = {
+"times": PoolRealArray( 0, 0.4, 0.7, 1 ),
+"transitions": PoolRealArray( 1, 1, 1, 1 ),
+"update": 0,
+"values": [ Vector2( -79.4923, 5.15417 ), Vector2( -58.9455, 19.6011 ), Vector2( -99.9793, -6.49469 ), Vector2( -79.4923, 5.15417 ) ]
+}
+
+[node name="mainMenu" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 3 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="menu_text" type="GridContainer" parent="."]
+light_mask = 0
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -64.0
+margin_top = -169.0
+margin_right = 64.0
+margin_bottom = 150.0
+custom_constants/vseparation = 50
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start" type="Label" parent="menu_text"]
+margin_right = 128.0
+margin_bottom = 73.0
+custom_colors/font_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Start"
+align = 1
+
+[node name="options" type="Label" parent="menu_text"]
+margin_top = 123.0
+margin_right = 128.0
+margin_bottom = 196.0
+custom_colors/font_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "Options"
+align = 1
+
+[node name="exit" type="Label" parent="menu_text"]
+margin_top = 246.0
+margin_right = 128.0
+margin_bottom = 319.0
+custom_colors/font_color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+custom_fonts/font = SubResource( 1 )
+text = "exit"
+align = 1
+
+[node name="menu_buttons" type="GridContainer" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -100.0
+margin_top = -180.0
+margin_right = 100.0
+margin_bottom = 180.0
+custom_constants/vseparation = 32
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="start" type="TextureButton" parent="menu_buttons"]
+margin_right = 200.8
+margin_bottom = 90.4
+rect_min_size = Vector2( 200.8, 90.4 )
+rect_pivot_offset = Vector2( 99.3744, 43.0888 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+expand = true
+
+[node name="options" type="TextureButton" parent="menu_buttons"]
+margin_top = 122.0
+margin_right = 200.8
+margin_bottom = 212.4
+rect_min_size = Vector2( 200.8, 90.4 )
+rect_pivot_offset = Vector2( 99.3744, 47.5964 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+expand = true
+
+[node name="hand" type="Sprite" parent="menu_buttons/options"]
+position = Vector2( -79.4923, 5.15417 )
+rotation = -1.23957
+scale = Vector2( 0.495157, 0.495157 )
+texture = ExtResource( 5 )
+
+[node name="exit" type="TextureButton" parent="menu_buttons"]
+margin_top = 244.0
+margin_right = 200.8
+margin_bottom = 334.4
+rect_min_size = Vector2( 200.8, 90.4 )
+rect_pivot_offset = Vector2( 101.156, 43.1951 )
+texture_normal = ExtResource( 1 )
+texture_pressed = ExtResource( 2 )
+expand = true
+
+[node name="close1" type="ColorRect" parent="."]
+anchor_right = 1.0
+margin_top = -498.0
+color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="close2" type="ColorRect" parent="."]
+anchor_top = 1.0
+anchor_right = 1.0
+anchor_bottom = 1.0
+margin_bottom = 570.0
+color = Color( 0.0666667, 0.0666667, 0.0666667, 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="close_timer" type="Timer" parent="."]
+wait_time = 0.001
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/hand = SubResource( 2 )
+
+[node name="AdMob" type="Node" parent="."]
+script = ExtResource( 6 )
+banner_on_top = false
+banner_size = "BANNER"
+banner_id = "ca-app-pub-3940256099942544/6300978111"
+
+[connection signal="button_up" from="menu_buttons/start" to="." method="_on_start_button_up"]
+[connection signal="button_up" from="menu_buttons/options" to="." method="_on_options_button_up"]
+[connection signal="button_up" from="menu_buttons/exit" to="." method="_on_exit_button_up"]
+[connection signal="timeout" from="close_timer" to="." method="_on_close_timer_timeout"]

@@ -1,0 +1,81 @@
+[gd_scene load_steps=8 format=2]
+
+[ext_resource path="res://scripts/disconnected.gd" type="Script" id=1]
+[ext_resource path="res://assets/fonts/GiveYouGlory-Regular.ttf" type="DynamicFontData" id=2]
+[ext_resource path="res://assets/images/disconnected.png" type="Texture" id=3]
+[ext_resource path="res://assets/images/home_normal.png" type="Texture" id=4]
+[ext_resource path="res://assets/images/home_pressed.png" type="Texture" id=5]
+
+[sub_resource type="DynamicFont" id=1]
+size = 60
+font_data = ExtResource( 2 )
+
+[sub_resource type="Animation" id=2]
+resource_name = "text"
+length = 1.2
+step = 0.04
+tracks/0/type = "value"
+tracks/0/path = NodePath("stat:text")
+tracks/0/interp = 1
+tracks/0/loop_wrap = true
+tracks/0/imported = false
+tracks/0/enabled = true
+tracks/0/keys = {
+"times": PoolRealArray( 0, 0.04, 0.08, 0.12, 0.2, 0.24, 0.28, 0.32, 0.4, 0.48, 0.52, 0.56, 0.64, 0.72, 0.76, 0.8, 0.88, 0.92, 0.96, 1.04, 1.12, 1.2 ),
+"transitions": PoolRealArray( 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1, 1 ),
+"update": 1,
+"values": [ "P", "Pl", "Pla", "Play", "Player ", "Player d", "Player dis", "Player disc", "Player disco", "Player discoc", "Player discoct", "Player discoc", "Player disco", "Player discon", "Player disconn", "Player disconne", "Player disconnec", "Player disconnecte", "Player disconnectet", "Player disconnecte", "Player disconnected", "Player disconnected !" ]
+}
+
+[node name="disconnected" type="Control"]
+anchor_right = 1.0
+anchor_bottom = 1.0
+script = ExtResource( 1 )
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="stat" type="Label" parent="."]
+anchor_right = 1.0
+margin_top = 55.0
+margin_bottom = 152.0
+custom_fonts/font = SubResource( 1 )
+custom_colors/font_color = Color( 0.0705882, 0.0705882, 0.0705882, 1 )
+text = "Player disconnected !"
+align = 1
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="img" type="TextureRect" parent="."]
+anchor_left = 0.5
+anchor_top = 0.5
+anchor_right = 0.5
+anchor_bottom = 0.5
+margin_left = -108.5
+margin_top = -122.5
+margin_right = 108.5
+margin_bottom = 94.5
+texture = ExtResource( 3 )
+expand = true
+__meta__ = {
+"_edit_use_anchors_": false
+}
+
+[node name="home_btn" type="TextureButton" parent="."]
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+margin_left = -68.5
+margin_top = -151.0
+margin_right = 68.5
+margin_bottom = -14.0
+texture_normal = ExtResource( 4 )
+texture_pressed = ExtResource( 5 )
+expand = true
+
+[node name="AnimationPlayer" type="AnimationPlayer" parent="."]
+anims/text = SubResource( 2 )
+
+[connection signal="button_up" from="home_btn" to="." method="_on_home_btn_button_up"]
