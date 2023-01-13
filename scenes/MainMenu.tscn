@@ -57,9 +57,6 @@ tracks/2/keys = {
 anchor_right = 1.0
 anchor_bottom = 1.0
 script = ExtResource( 3 )
-__meta__ = {
-"_edit_use_anchors_": false
-}
 
 [node name="menu_text" type="GridContainer" parent="."]
 light_mask = 0
@@ -137,7 +134,7 @@ expand = true
 
 [node name="hand" type="Sprite" parent="menu_buttons/options"]
 position = Vector2( -79.4923, 5.15417 )
-rotation = -1.23957
+rotation = -1.309
 scale = Vector2( 0.495157, 0.495157 )
 texture = ExtResource( 5 )
 
